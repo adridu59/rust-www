@@ -1,116 +1,101 @@
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/cj2hUnSRBhwmSPr9kS5899kZXW4sYc4BjuAIFc1SXII.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v4/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v4/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
+}
+
 body {
-	margin-top: 30px;
+  color: #444;
+  font-family: 'Droid Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h1 small {
-	color: #777;
+h1, h2, h3, h4, h5, /*.btn,*/ header > p {
+  font-family: 'Droid Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-p {
-	margin: 20px 0;
+code {
+  color: #444;
 }
-
-ul.menu {
-	font-size: 1em;
-	margin: 0;
-	padding: 0;
+p, ul {
+  font-family: 'Droid Serif', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
-ul.menu li {
-	list-style-type: none;
+footer, footer > p {
+  font-family: 'Droid Serif', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
-ul.menu h2 {
-	font-size: 1.1em;
-	font-weight: bold;
-	margin: 0;
+.rust-code {
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
 }
-ul.menu li>ul {
-	margin-top: .5em;
-	padding-left: 0em;
-	line-height: 1.5em;
+.keyword {
+  font-weight: bold;
+  color: #0060B0;      
 }
-
-.col-md-2 h2 {
-	font-weight: bold;
-	font-size: 1.1em;
-	line-height: 24px;
-	margin-top: 7px;
+.identifier {
+  color: #B00060;
 }
-
-.table-features {
-	width: 100%;
-	margin-bottom: 18px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	border-collapse: inherit;
+.string {
+  color: #008000;
 }
-.table-features td {
-	padding: 6px 12px;
-	border: none;
+section {
+  margin-top: 50px;
 }
-
-@media (min-width: 992px) {
-	img.ribbon {
-		display: inline !important;
-		position: absolute;
-		top: 0;
-		right: 0;
-		border: 0;
-	}
+.arg {
+  color: #303090;
+}
+.jumbotron {
+  background-color: #E1F2F5;
+}
+header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+table {
+  width: 100%;
+}
+th, td {
+  text-align: left;
 }
 
-/* Code highlighting */
-.cm-s-default span.cm-keyword {
-	color: #803C8D;
+/* Override lg width */
+@media (min-width: 1200px) {
+.container {
+width: 970px;
 }
-.cm-s-default span.cm-atom {
-	color: #221199;
 }
-.cm-s-default span.cm-number {
-	color: #2AA198;
+i {
+display: block;
 }
-.cm-s-default span.cm-def {
-	color: #256EB8;
+section h3 {
+  font-weight: bold;
 }
-.cm-s-default span.cm-variable {
-	color: black;
+section ul {
+  padding-left: 25px;
 }
-.cm-s-default span.cm-variable-2 {
-	color: #817E61;
-}
-.cm-s-default span.cm-variable-3 {
-	color: #008855;
-}
-.cm-s-default span.cm-property {
-	color: black;
-}
-.cm-s-default span.cm-operator {
-	color: black;
-}
-.cm-s-default span.cm-comment {
-	color: #A82323;
-}
-.cm-s-default span.cm-string {
-	color: #866544;
-}
-.cm-s-default span.cm-string-2 {
-	color: #FF5500;
-}
-.cm-s-default span.cm-meta {
-	color: #555555;
-}
-.cm-s-default span.cm-error {
-	color: #FF0000;
-}
-.cm-s-default span.cm-qualifier {
-	color: #555555;
-}
-.cm-s-default span.cm-builtin {
-	color: #3300AA;
-}
-.cm-s-default span.cm-bracket {
-	color: #999977;
-}
-.cm-s-default span.cm-tag {
-	color: #117700;
-}
-.cm-s-default span.cm-attribute {
-	color: #0000CC;
+header h1 small {
+  font-size: 70%;
 }
