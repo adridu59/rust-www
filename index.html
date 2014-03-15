@@ -1,136 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>The Rust Programming Language</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="Rust, Rust programming language, rustlang, Mozilla Rust">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+<html class="no-js windows" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rust &ndash; a safe, concurrent, practical language.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Rust, Rust programming language, rustlang, Mozilla Rust">
+        <meta name="robots" content="noindex, nofollow">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/bootstrap-full.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-	<body class="container">
-		<a href="//github.com/mozilla/rust"><img class="ribbon" style="display: none" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-		<ul class="row menu">
-			<li class="col-xs-2 col-md-2">
-				<img class="img-responsive" src="logos/rust-logo-128x128-blk-v2.png" height="128" width="128" alt="Rust logo" />
-			</li>
-			<li class="col-xs-2 col-md-2"><h2>Getting Started</h2>
-				<ul>
-					<li><a href="http://doc.rust-lang.org/doc/master/tutorial.html">Tutorial</a> (master)</li>
-					<li><a href="http://doc.rust-lang.org/doc/master/rust.html">Manual</a> (master)</li>
-					<li><a href="http://doc.rust-lang.org/doc/0.9/tutorial.html">Tutorial</a> (0.9)</li>
-					<li><a href="http://doc.rust-lang.org/doc/0.9/rust.html">Manual</a> (0.9)</li>
-				</ul>
-			</li>
-			<li class="col-xs-2 col-md-2"><h2>Documentation</h2>
-				<ul>
-					<li>
-						<a href="http://doc.rust-lang.org/doc/master/std/index.html">std</a> |
-						<a href="http://doc.rust-lang.org/doc/master/extra/index.html">extra</a> (master)
-					</li>
-					<li>
-						<a href="http://doc.rust-lang.org/doc/0.9/std/index.html">std</a> |
-						<a href="http://doc.rust-lang.org/doc/0.9/extra/index.html">extra</a> (0.9)
-					</li>
-					<li>
-						<a href="http://static.rust-lang.org/doc/master/index.html">Other docs</a> (master)
-					</li>
-					<li>
-						<a href="http://static.rust-lang.org/doc/0.9/index.html">Other docs</a> (0.9)
-					</li>
-				</ul>
-			</li>
-			<li class="col-xs-2 col-md-2"><h2>Downloads</h2>
-				<ul>
-					<li>
-						0.9 - Jan. 9, 2014
-					</li>
-					<li>
-						<a href="http://static.rust-lang.org/dist/rust-0.9.tar.gz">.tar.gz</a> |
-						<a href="https://github.com/mozilla/rust/wiki/Using-Rust-on-Windows">.exe</a>
-					</li>
-					<li>
-						<a href="https://github.com/mozilla/rust/blob/0.9/RELEASES.txt">Release notes</a>
-					</li>
-					<li>
-						<a href="https://github.com/mozilla/rust/wiki/Doc-releases">Previous releases</a>
-					</li>
-				</ul>
-			</li>
-			<li class="col-xs-2 col-md-2"><h2>Community</h2>
-				<ul>
-					<li>
-						<a href="http://github.com/mozilla/rust">GitHub</a>
-					</li>
-					<li>
-						<a href="http://reddit.com/r/rust">Reddit</a> | <a href="http://twitter.com/rustlang">Twitter</a>
-					</li>
-					<li>
-						<a href="https://mail.mozilla.org/listinfo/rust-dev">rust-dev</a> mailing list
-					</li>
-					<li>
-						<a href="http://chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust">#rust on irc.mozilla.org</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<div>
-			<h1>Rust <small>a safe, concurrent, practical language</small></h1>
-			<p>
-				Rust is a curly-brace, block-structured expression language.
-				It visually resembles the C language family, but differs 
-				significantly in syntactic and semantic details.
-				Its design is oriented toward concerns of “programming in the
-				large”, that is, of creating and maintaining <em>boundaries</em>
-				– both abstract and operational – that preserve large-system <em>
-				integrity</em>, <em>availability</em> and <em>concurrency</em>.
-			</p>
-			<p>
-				It supports a mixture of imperative procedural, concurrent
-				actor, object-oriented and pure functional styles. Rust also
-				supports generic programming and metaprogramming, in both
-				static and dynamic styles.
-			</p>
+    <body class="container">
+        <a href="//github.com/mozilla/rust">
+            <img class="ribbon" style="display: none" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+        </a>
+        <header>        
+            <h1>
+                <a href="index.html" style="color: black"><img src="logos/rust-logo-64x64-blk.png" alt="Rust"> Rust</a>
+                <br><small>&mdash; a safe, concurrent, practical language.</small>
+            </h1>
+        </header>
 
-			<div class="row">
-				<div class="col-md-2">
-					<h2>A short summary of features</h2>
-				</div>
-				<div class="col-md-10">
-					<table class="table-features table-hover"><tbody>
-						<tr><td>Type system</td><td>static, nominal, linear, algebraic, locally inferred</td></tr>
-						<tr><td>Memory safety</td><td>no null or dangling pointers, no buffer overflows</td></tr>
-						<tr><td>Concurrency</td><td>lightweight tasks with message passing, no shared memory</td></tr>
-						<tr><td>Generics</td><td>type parametrization with type classes</td></tr>
-						<tr><td>Exception handling</td><td>unrecoverable unwinding with task isolation</td></tr>
-						<tr><td>Memory model</td><td>optional task-local GC, safe pointer types with region analysis</td></tr>
-						<tr><td>Compilation model</td><td>ahead-of-time, C/C++ compatible</td></tr>
-						<tr><td>License</td><td>dual MIT / Apache 2</td></tr>
-					</tbody></table>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<h2>A very small taste of what it looks like</h2>
-				</div>
-				<div class="col-md-10">
-<pre class="cm-s-default">
-<span class="cm-keyword">fn</span> <span class="cm-def">main</span>() {
-    <span class="cm-keyword">let</span> <span class="cm-def">nums</span> = [<span class="cm-number">1</span>, <span class="cm-number">2</span>];
-    <span class="cm-keyword">let</span> <span class="cm-def">noms</span> = [<span class="cm-string">"Tim"</span>, <span class="cm-string">"Eston"</span>, <span class="cm-string">"Aaron"</span>, <span class="cm-string">"Ben"</span>];
-&nbsp;
-    <span class="cm-keyword">let</span> <span class="cm-def">mut</span> <span class="cm-def">odds</span> = <span class="cm-variable">nums</span>.<span class="cm-variable">iter</span>().<span class="cm-variable">map</span>(|&amp;<span class="cm-variable">x</span>| <span class="cm-variable">x</span> * <span class="cm-number">2</span> - <span class="cm-number">1</span>);
-&nbsp;
-    <span class="cm-keyword">for</span> <span class="cm-def">num</span> <span class="cm-keyword">in</span> <span class="cm-variable">odds</span> {
-        <span class="cm-keyword">do</span> <span class="cm-variable">spawn</span> {
-            <span class="cm-variable">println</span>!(<span class="cm-string">"{:s} says hello from a lightweight thread!"</span>, <span class="cm-variable">noms</span>[<span class="cm-variable">num</span>]);
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-5">
+      <p class="rust-code">
+        <span class="kw">fn</span> <span class="id">main</span>() {<br>
+          &nbsp;&nbsp;<span class="kw">let</span> st = [<span class="str">"World"</span>,
+          <span class="str">"Moon"</span>];<br><br>
+          &nbsp;&nbsp;<span class="kw">for</span> p <span class="kw">in</span> st.iter() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;println!(<span class="str">"Hello {}"</span>, p);<br>
+          &nbsp;&nbsp;}<br>
         }
-    }
-}
-</pre>
-				</div>
-			</div>
-		</div>
-	</body>
+      </p>
+    </div>
+    <div class="col-md-7">
+      <p class="lead">Rust is a multi-paradigm and low-level language
+      with native concurrency, safe memory access & data sharing that adds-in
+      functional programming aspects and type classes.</p>
+      <p class="btn-dl">
+        <a href="download.html" class="btn btn-large btn-success btn-windows">
+          <i class="fa fa-cloud-download fa-3x pull-left"></i>
+          Download Rust<br>
+          <small>(Release 0.9-Win)</small>
+        </a>
+        <a href="download.html" class="btn btn-large btn-success btn-macos">
+          <i class="fa fa-cloud-download fa-3x pull-left"></i>
+          Download Rust<br>
+          <small>(Release 0.9-OSX)</small>
+        </a>
+        <a href="download.html" class="btn btn-large btn-success btn-linux">
+          <i class="fa fa-cloud-download fa-3x pull-left"></i>
+          Download Rust<br>
+          <small>(Release 0.9-GNU)</small>
+        </a>
+        <a href="download.html" class="btn btn-large btn-success btn-android">
+          <i class="fa fa-cloud-download fa-3x pull-left"></i>
+          Download Rust<br>
+          <small>(Release 0.9-Android)</small>
+        </a>
+        <a href="download.html" class="btn btn-large btn-success btn-other">
+          <i class="fa fa-cloud-download fa-3x pull-left"></i>
+          Download Rust<br>
+          <small>(Release 0.9)</small>
+        </a>
+        &nbsp;&nbsp;
+        and <a href="http://static.rust-lang.org/doc/0.9/tutorial.html">
+        <span class="xs-text">Get Started</span>
+        <span class="md-text" style="display: none">check out our Tutorial</span>
+        </a>
+        <small class="alt text-muted"><a href="download.html">All Platforms</a>
+        | <a href="https://github.com/mozilla/rust/blob/master/RELEASES.txt">Changelog</a></small>
+      </p>
+    </div>
+  </div>      
+</div>
+
+<section class="row">
+  
+    <div class="col-md-4">
+    <h3><i class="fa fa-twitter fa-lg"></i> &nbsp; Tweets</h3>
+    <div id="lifestream"></div>
+    <p>
+      <a href="https://twitter.com/rustlang"><i class="fa fa-rss"></i> Follow @rustlang</a>
+    </p>
+  </div>
+  
+  <div class="col-md-4">
+    <h3><i class="fa fa-lightbulb-o fa-lg"></i> &nbsp; Learn Rust</h3>
+    <p>
+      We invite you to take a look at
+      <a href="http://static.rust-lang.org/doc/master/index.html">our documentation</a>.
+    </p>
+    <p>
+      Besides the <a href="http://static.rust-lang.org/doc/master/tutorial.html">Tutorial</a> & Guides, you can also have a look at <a href="http://static.rust-lang.org/doc/master/rust.html">our Reference Manual</a>.<br>
+      Everything else is on the <a href="https://github.com/mozilla/rust/wiki">Wiki</a>.
+    </p>
+    <p>
+      Also, our rustdoc tool generates 
+      <a href="http://static.rust-lang.org/doc/master/std/index.html">Standard</a> and
+      <a href="http://static.rust-lang.org/doc/master/extra/index.html">Extra</a> libraries documentation.
+    </p>
+  </div>
+  
+  <div class="col-md-4">
+    <h3><i class="fa fa-comments fa-lg"></i> &nbsp; Community</h3>    
+    <ul>
+      <li>
+        Need help? Join the <a href="http://chat.mibbit.com/?server=irc.mozilla.org&channel=%23rust"><code>#rust</code> IRC channel</a>.
+     </li>
+     <li>
+        Use the 
+        <a href="http://stackoverflow.com/questions/tagged/rust">'rust' tag</a>
+        on StackOverflow and check out the <a href="http://www.reddit.com/r/rust/">/r/rust</a> subreddit!
+      </li>
+      <li>
+        Get the code, report issues and contribute <a href="https://github.com/mozilla/rust">on GitHub</a>.
+      </li>
+      <li>
+      Discuss on <a href="https://mail.mozilla.org/listinfo/rust-dev">our development mailing-list</a>.
+      </li>
+    </ul>
+  </div>
+  
+</section>
+
+      <footer>
+        <hr/>
+        <p>
+          Copyright &copy; 2011 &ndash; 2014, The Rust Project developers. Rust is developed in the open with &hearts; from Mozilla.
+          <br/>
+          The Rust source code, binaries, documentation and website are made available under the terms of the
+          <a href="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> or the <a href="http://opensource.org/licenses/MIT">MIT License</a>.
+          </p>
+      </footer>
+
+      <script src="js/site.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+      <script src="js/jquery.tmpl.min.js"></script>
+      <script src="js/jquery.lifestream.min.js"></script>
+<script>
+  $("#lifestream").lifestream({
+    limit: 4,
+    list:[
+      {
+        service: "twitter",
+        user: "rustlang"
+      }
+    ]
+  });
+</script>
+  </body>
 </html>

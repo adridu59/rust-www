@@ -1,116 +1,137 @@
-body {
-	margin-top: 30px;
+@font-face {
+    font-family: 'Clear Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Clear Sans'), url(../font/ClearSans-Regular.woff) format('woff');
 }
-h1 small {
-	color: #777;
-}
-p {
-	margin: 20px 0;
-}
-
-ul.menu {
-	font-size: 1em;
-	margin: 0;
-	padding: 0;
-}
-ul.menu li {
-	list-style-type: none;
-}
-ul.menu h2 {
-	font-size: 1.1em;
-	font-weight: bold;
-	margin: 0;
-}
-ul.menu li>ul {
-	margin-top: .5em;
-	padding-left: 0em;
-	line-height: 1.5em;
+@font-face {
+    font-family: 'Clear Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Clear Sans'), url(../font/ClearSans-Bold.woff) format('woff');
 }
 
-.col-md-2 h2 {
-	font-weight: bold;
-	font-size: 1.1em;
-	line-height: 24px;
-	margin-top: 7px;
+body, h1, h2, h3 {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body, h1, h2, h3, code {
+    color: #444;
+}
+p, ul {
+    font-size: 16px;
+}
+footer, footer > p {
+    font-size: 13px;
+}
+.jumbotron p {
+    font-size: 20px;
+}
+.rust-code {
+    font-family: "Courier New", "Courier", "Nimbus Mono L", monospace;
+    font-size: 18px !important;
+}
+@media (min-width: 992px) {
+    .rust-code {
+        margin-top: 18px;
+    }
+}
+.kw {
+    font-weight: bold;
+    color: #7B644F;
+}
+.id {
+    color: #A6856B;
+}
+.str {
+    color: #A2A96F;
+}
+.var {
+    color: #D7AF72;
+}
+.jumbotron {
+    background-color: #F8F8F8;
+}
+header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+table {
+    width: 100%;
+}
+th, td {
+    text-align: left;
 }
 
-.table-features {
-	width: 100%;
-	margin-bottom: 18px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	border-collapse: inherit;
+/* Override lg width */
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
 }
-.table-features td {
-	padding: 6px 12px;
-	border: none;
+@media (min-width: 768px) {
+    .lead {
+        /*font-size: 23px;*/
+    }
+    .xs-text {
+        display: none;
+    }
+    .md-text {
+        display: inline !important;
+    }
+}
+i {
+    display: block;
+}
+section h3 {
+    font-weight: bold;
+}
+section ul {
+    padding-left: 25px;
+}
+header h1 small {
+    font-size: 70%;
 }
 
 @media (min-width: 992px) {
-	img.ribbon {
-		display: inline !important;
-		position: absolute;
-		top: 0;
-		right: 0;
-		border: 0;
-	}
+    img.ribbon {
+        display: inline !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+    }
 }
 
-/* Code highlighting */
-.cm-s-default span.cm-keyword {
-	color: #803C8D;
+/* Download script */
+html p.btn-dl>a.btn {
+    display: none;
 }
-.cm-s-default span.cm-atom {
-	color: #221199;
+html.no-js .btn-other {
+    display: inline-block;
 }
-.cm-s-default span.cm-number {
-	color: #2AA198;
+html.js.windows .btn-windows {
+    display: inline-block !important;
 }
-.cm-s-default span.cm-def {
-	color: #256EB8;
+html.osx .btn-macos {
+    display: inline-block !important;
 }
-.cm-s-default span.cm-variable {
-	color: black;
+html.linux .btn-linux {
+    display: inline-block !important;
 }
-.cm-s-default span.cm-variable-2 {
-	color: #817E61;
+html.android .btn-android {
+    display: inline-block !important;
 }
-.cm-s-default span.cm-variable-3 {
-	color: #008855;
+
+small.alt {
+    display: block;
+    font-size: 13px;
+    margin-left: 15px;
 }
-.cm-s-default span.cm-property {
-	color: black;
+small.alt a {
+    color: inherit;
 }
-.cm-s-default span.cm-operator {
-	color: black;
-}
-.cm-s-default span.cm-comment {
-	color: #A82323;
-}
-.cm-s-default span.cm-string {
-	color: #866544;
-}
-.cm-s-default span.cm-string-2 {
-	color: #FF5500;
-}
-.cm-s-default span.cm-meta {
-	color: #555555;
-}
-.cm-s-default span.cm-error {
-	color: #FF0000;
-}
-.cm-s-default span.cm-qualifier {
-	color: #555555;
-}
-.cm-s-default span.cm-builtin {
-	color: #3300AA;
-}
-.cm-s-default span.cm-bracket {
-	color: #999977;
-}
-.cm-s-default span.cm-tag {
-	color: #117700;
-}
-.cm-s-default span.cm-attribute {
-	color: #0000CC;
+
+/* Hack this */
+header a:hover {
+    text-decoration: none;
 }
